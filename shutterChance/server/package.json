@@ -1,0 +1,17 @@
+{
+  "name": "city",
+  "version": "0.0.3",
+  "private": true,
+  "scripts": {
+    "start": "EXEC=`ls | grep .coffee` && NODE_ENV=production forever start -c coffee ./$EXEC",
+    "stop": "EXEC=`ls | grep .coffee` && forever stop $EXEC"
+  },
+  "dependencies": {
+    "underscore": "*",
+    "coffee-script": "*",
+    "express": "*",
+    "jade": "*",
+    "less-middleware": "*",
+    "coffee-middleware": "git://github.com/geta6/express-coffee.git"
+  }
+}
